@@ -28,5 +28,5 @@ echo "end" >> $BUILD_DIR/mrbgems/mruby-hammerkit/mrblib/lib.rb
 
 cp $BASE_PATH/hammerkit_config.rb $BUILD_DIR/build_config.rb
 cd $BUILD_DIR && make
-rm -rf $BASE_PATH/../out
-mv $BASE_PATH/tmp/*/bin $BASE_PATH/../out
+rm -rf $BASE_PATH/../out && mkdir -p $BASE_PATH/../out
+mv $BUILD_DIR/bin/mruby $BASE_PATH/../out/hammerkit
